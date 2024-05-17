@@ -30,8 +30,6 @@ jobs:
       - name: Build APK
         run: flutter build apk --release
 
-      - name: Build iOS
-        run: flutter build ios --release --no-codesign
 
       - name: Create Release
         id: create_release
@@ -54,14 +52,4 @@ jobs:
           asset_name: v0.0.${{ github.run_number }}
           asset_content_type: application/vnd.android.package-archive
 
-      - name: Upload iOS IPA to Release
-        if: success()
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: build/ios/iphoneos/app.ipa
-          asset_name: v0.0.${{ github.run_number }}
-          asset_content_type: application/octet-stream
           
