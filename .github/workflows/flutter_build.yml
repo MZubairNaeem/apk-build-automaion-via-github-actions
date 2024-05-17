@@ -23,3 +23,10 @@ jobs:
 
     - name: Run build
       run: flutter build apk --release # or flutter build ios, depending on your target platform
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: build
+        path: build/app/outputs/flutter-apk/app-release.apk  # Adjust the path according to your build output
+
