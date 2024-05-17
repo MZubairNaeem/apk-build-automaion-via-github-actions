@@ -3,7 +3,7 @@ name: Flutter Release Build
 on:
   push:
     branches:
-      - main  # or the branch you want to trigger the build
+      - main # or the branch you want to trigger the build
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.7.0" # Use your desired Flutter version
+          flutter-version: "3.16.9" # Use your desired Flutter version
 
       - name: Install dependencies
         run: flutter pub get
