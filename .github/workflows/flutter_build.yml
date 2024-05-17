@@ -2,8 +2,8 @@ name: Flutter Release Build
 
 on:
   push:
-    tags:
-      - "v*" # This will trigger the workflow on version tags like v1.0.0
+    branches:
+      - main  # or the branch you want to trigger the build
 
 jobs:
   build:
