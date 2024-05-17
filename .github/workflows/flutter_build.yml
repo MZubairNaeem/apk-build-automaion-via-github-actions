@@ -25,7 +25,7 @@ jobs:
       run: flutter build apk --release # or flutter build ios, depending on your target platform
 
     - name: Push to Releases
-        uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@v1
       with:
         name: build
         path: build/app/outputs/flutter-apk/app-release.apk  # Adjust the path according to your build output
