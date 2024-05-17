@@ -64,3 +64,4 @@ jobs:
           asset_path: build/ios/iphoneos/*.ipa
           asset_name: ${{ github.ref_name }}
           asset_content_type: application/octet-stream
+          
